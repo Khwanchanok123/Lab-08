@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+  </style>
+
+</head>
+
+  <body style="background-color: #f8e5ff">
+    <div class="container" id="app">
+      <h3 class="text-center" align="center" style="background-color: #E1BEE7"><font face="Monospace" size="20" color="#3A2558" >
+        <b>Cryptocurrency Pricing </b></h3>
+    <div class="columns medium-12 d-flex justify-content-center" v-for="(result, index) in results" 
+      size="10" style="background-color: #f8e5ff" >
+        <div class="card" size="10" align="center">
+          <div class="card-section" style="background-color: #bebfe7" align="center" size="12">
+            <p> {{ index }} </p>
+          </div>
+          <div class="card-divider" style="background-color: #a0a1f6" align="center">
+            <p>$ {{ result.USD }}</p>
+          </div>
+          <div class="card-section" style="background-color: #e4e4f7" align="center">
+            <p>{{ result.EUR }} EUR</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+    <h4><center><img src="btc.gif" style="width: 250px;height:130px;"></center></h4>
+  
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="vueApp.js"></script>
+
+  </body>
